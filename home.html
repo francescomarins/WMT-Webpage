@@ -49,8 +49,9 @@
   body {
     margin-left: 2.5%;
     margin-right: 2.5%;
-    background: black;
-    background-size: 100% 100%;
+    background-image: linear-gradient(to bottom right, black, steelblue, slateblue, rebeccaPurple);
+    /* background: black;
+    background-size: 100% 100%; */
     font-family: "Raleway Thin";
     color: white;
   }
@@ -59,7 +60,10 @@
     object-fit: contain;
   }
   nav {
-    height: 80px;
+    position: sticky;
+    top: 2.5%;
+    height: 40px;
+    padding: 10px 0;
     text-align: left;
   }
   a {
@@ -76,7 +80,8 @@
   float: right;
   color: white;
   background-color: deeppink;
-  border: 0 solid blue;
+  border-radius: 3px;
+  border-width: 0;
   font-size: 1em;
   font-weight: 700;
   padding: .2% .2%;
@@ -100,6 +105,7 @@
   }
   header h2 {
     color: deeppink;
+    text-shadow: 2px 2px 5px black;
     font-size: 100%;
   }
   article {
@@ -131,7 +137,7 @@
     <a href="">Home</a>
     <a href="">Participants</a>
     <a href="">Statistics</a>
-    <button class="vote" type="button" name="vote">Vote now!</button>
+    <button type="button" class="vote" name="vote" onclick="document.location = 'login.php';">Vote now!</button>
   </nav>
   <section id="container">
     <header id="header">
