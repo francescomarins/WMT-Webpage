@@ -8,19 +8,20 @@
   <?php
     if($_POST['operation'] == "registration") {
       $result = false;
-      include("passwords.php");
       $userpresent = false;
+      include("passwords.php");
       foreach (array_keys($USERS) as $email) {
         if ( $email == $_POST["email"]) {
           $userpresent = true;
           break;
-        }
-      }
+        };
+      };
       if (!$userpresent) {
-        $sql = "INSERT INTO users (email, password) VALUES ('" . $_POST["email"] . "', '" . $_POST["password"] . "'))";
+        $sql = "INSERT INTO users (email, password) VALUES ('" . $_POST["email"] . "', '" . $_POST["password"] . "')";
+        echo "$sql";
         $result = mysqli_query($con, $sql);
-    }
-  }
+    };
+  };
   ?>
 </head>
   <body>
