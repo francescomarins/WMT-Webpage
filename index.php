@@ -14,7 +14,7 @@
     <a href="index.php">Home</a>
     <a href="">Participants</a>
     <a href="">Statistics</a>
-    <button type="button" class="vote" name="vote" onclick="document.location = 'login.html';">Vote!</button>
+    <button type="button" class="vote" name="vote" onclick="document.location = 'login.php';">Vote!</button>
   </nav>
   <section id="container">
     <header id="header">

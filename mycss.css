@@ -29,7 +29,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
+.error {
+  color: red;
+}
 body {
   background-image: linear-gradient(to bottom right, black, steelblue, slateblue, rebeccaPurple);
   font-family: "Raleway Thin";
