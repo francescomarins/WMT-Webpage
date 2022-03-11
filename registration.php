@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <?php
     if($_POST['operation'] == "registration") {
-      $result = false;
       $userpresent = false;
       include("passwords.php");
       foreach (array_keys($USERS) as $email) {
@@ -16,9 +15,9 @@
           break;
         };
       };
+      $result = false;
       if (!$userpresent) {
         $sql = "INSERT INTO users (email, password) VALUES ('" . $_POST["email"] . "', '" . $_POST["password"] . "')";
-        echo "$sql";
         $result = mysqli_query($con, $sql);
     };
   };
