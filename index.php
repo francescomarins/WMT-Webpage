@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOTESxEUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
@@ -14,7 +13,7 @@
     <a href="index.php">Home</a>
     <a href="">Participants</a>
     <a href="">Statistics</a>
-    <button type="button" class="vote" name="vote" onclick="document.location = 'login.php';">Vote!</button>
+    <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
   </nav>
   <section id="container">
     <header id="header">

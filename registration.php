@@ -29,14 +29,14 @@
       <a href="index.php">Home</a>
       <a href="">Participants</a>
       <a href="">Statistics</a>
-      <button type="button" name="vote" onclick="document.location='login.php';">Vote!</button>
+      <button type="button" name="vote" onclick="document.location='votes.php';">Vote!</button>
     </nav>
     <section id="reg-container">
       <header>
         <h1>Registration</h1>
       </header>
       <article id="reg">
-        <form name="reg-form" class="reg-form" action="registration.php" method="post">
+        <form name="reg-form" class="reg-form centred" action="registration.php" method="post">
           <?php
             if($userpresent)
             echo "<p>Email already registered. Click on the button below to log in!</p>"

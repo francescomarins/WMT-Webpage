@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <script type="text/javascript" src="javascript.js"></script>
   <?php
+  session_start();
   if($_POST['operation'] == "login") {
     $wrongpasswd = false;
-    session_start();
     include("passwords.php");
      if (isset($USERS[$_POST["email"]]) && $USERS[$_POST["email"]]==$_POST["password"]) {
        $_SESSION["logged"]=$_POST["email"];
@@ -35,7 +35,7 @@
       <h1>Login</h1>
     </header>
     <article id="login">
-      <form name="login-form" class="login-form" action="login.php" method="post">
+      <form name="login-form" class="login-form centred" action="login.php" method="post">
         <?php
           if($wrongpasswd)
           echo "<p>Wrong email or password!</p>"

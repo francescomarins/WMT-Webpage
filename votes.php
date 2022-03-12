@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>VOTESxEUROVISION</title>
+  <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
+  <link rel="stylesheet" href="mycss.css" type="text/css">
+</head>
+  <body>
+    <?php session_start(); include("passwords.php"); check_logged(); ?>
+    <nav id="menu">
+      <a class="logo" href="index.php">VOTESxEUROVISION</a>
+      <a href="index.php">Home</a>
+      <a href="">Participants</a>
+      <a href="">Statistics</a>
+      <form action="logout.php" method="post">
+        <button type="submit" id="logout" name="logout" value="logout">Logout</button>
+      </form>
+    </nav>
+  </body>
+</html>

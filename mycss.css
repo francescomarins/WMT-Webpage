@@ -29,9 +29,6 @@
   font-weight: normal;
   font-style: normal;
 }
-.error {
-  color: red;
-}
 body {
   background-image: linear-gradient(to bottom right, black, steelblue, slateblue, rebeccaPurple);
   font-family: "Raleway Thin";
@@ -41,6 +38,7 @@ nav {
   background: rgb(0,0,128, 0.1);
   border-radius: 3px;
   width: 100%;
+  align-items: center;
   position: sticky;
   top: 1%;
   display: flex;
@@ -63,19 +61,20 @@ border-radius: 3px;
 border-width: 0;
 font-size: 1em;
 font-weight: 700;
-padding: .2% .2%;
-width: 10%;
+min-width: 10%;
+min-height: 3em;
 }
 button:hover {
-  filter: drop-shadow(1px 1px 4px white);
+  filter: drop-shadow(0px 0px 4px white);
 }
-form {
-  width: 50%;
+form.centred {
+  width: 80%;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
-form * {
+form.centred * {
+  max-height: 1em;
+  min-width: 30%;
   margin: 1%;
   padding: 1%;
 }
@@ -123,4 +122,5 @@ footer {
 @media screen and (max-width: 600px) {
   nav { font-size: 0.8em; }
   button { font-size: 0.9em; }
+  form.centred * { min-width: 80%; }
 }
