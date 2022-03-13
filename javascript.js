@@ -15,5 +15,7 @@ function check() {
   var ok = false;
   if(exists(document.getElementById("email").value) && exists(document.getElementById("password").value))
     ok = true;
+  else
+    alert("Warning, some information are missing! Fill all fields properly.");
   return ok;
 }
