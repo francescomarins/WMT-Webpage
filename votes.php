@@ -16,7 +16,7 @@
     <nav id="menu">
       <a class="logo" href="index.php">VOTESxEUROVISION</a>
       <a href="index.php">Home</a>
-      <a href="">Participants</a>
+      <a href="partecipants.php">Participants</a>
       <a href="">Statistics</a>
       <form action="logout.php" method="post">
         <button type="submit" id="logout" name="logout" value="logout">Logout</button>
