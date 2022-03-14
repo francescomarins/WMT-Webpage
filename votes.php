@@ -22,5 +22,12 @@
         <button type="submit" id="logout" name="logout" value="logout">Logout</button>
       </form>
     </nav>
+    <header id="header">
+      <h1>Eurovision Voting Page</h1>
+      <h2>2022</h2>
+    </header>
+    <section id="voting-container">
+      <p>Hello</p>
+    </section>
   </body>
 </html>

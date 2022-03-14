@@ -43,9 +43,6 @@
         audience votes do not competely impact on the outcome. This is just a way to see how different results would be.
         Everyone can express a vote for each artist on this website for free.
       </p>
-      <video id="myv" src="unipv.mp4" controls>
-        Sorry, your browser does not support the VIDEO tag
-      </video><br><br>
     </article>
     <aside id="sidebar">
       <h3>Some information</h3>
