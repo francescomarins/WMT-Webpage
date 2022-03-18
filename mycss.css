@@ -44,12 +44,15 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-a {
+nav a {
   color: lightgrey;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1%;
+}
+a {
+  color: lightgrey;
 }
 a:hover {
     color: white;
@@ -112,6 +115,26 @@ input {
   border-radius: 5px;
   border: 1px solid steelblue;
 }
+.artist {
+background-image: linear-gradient(to right, blueviolet, lightseagreen);
+border-radius: 70em;
+padding: .3em 1em;
+color: white;
+cursor: pointer;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
+.details {
+  padding: 1%;
+}
+.musicvideo {
+  float: right;
+  width: 50%;
+  height: auto;
+}
+.country {
+  float: right;
+}
 .city {
     list-style: url("img/city.png");
   }
@@ -123,7 +146,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  nav { font-size: 0.8em; }
-  button { font-size: 0.9em; }
+  body { font-size: 0.8em; }
+  /* nav { font-size: 0.8em; }
+  button { font-size: 0.9em; } */
   form.centred * { min-width: 80%; }
+  .musicvideo { width: 100%; height: 100%; }
+  iframe { width: 100%; height: 100%;}
 }

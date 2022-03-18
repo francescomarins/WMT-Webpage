@@ -10,7 +10,7 @@
   <title>VOTESxEUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
-  <?php
+  <script type="text/javascript" src="javascript.js"></script>  <?php
 
   class Artist {
     public $name;
@@ -60,6 +60,11 @@
     $artist = new Artist($row['name'], $row['link'], $row['song'], $row['songlink'], $row['country']);
     array_push($artists, $artist);
   }
+
+  $videostring = "<div>To listen to the song taking part to the contest you can watch the video on the right.</div>";
+  $infostring0 = '<div>Or know more about <a href="';
+  $infostring1 = '">';
+  $infostring2 = '</a></div>';
   ?>
 </head>
 
@@ -78,9 +83,12 @@
   <section id="artists-container">
     <?php
     foreach ($artists as $singer) {
-      echo '<article id="' . $singer->get_country() . '">';
-      echo '<h2>' . $singer->get_name() . '</h2>';
-      echo $singer->get_songlink();
+      echo '<article class="artist-article" id="' . $singer->get_country() . '">';
+      echo '<h2 class="artist" onclick=showmore("' . $singer->get_country() . '");>' . $singer->get_name() . ' - ' . $singer->get_song() . '<span class="country">' . $singer->get_country() . '</span></h2>';
+      echo '<div class="details" id="' . $singer->get_country() . '-details" style="display: none;">';
+      echo '<span class="musicvideo"> ' . $singer->get_songlink() . '</span>';
+      echo '<div class="about_the_artist">' . '<h2>Information about the artist</h2>' . $videostring . $infostring0 . $singer->get_link() . $infostring1 . $singer->get_name() . $infostring2 .'</div>';
+      echo "</div>";
       echo '</article>';
     } ?>
   </section>

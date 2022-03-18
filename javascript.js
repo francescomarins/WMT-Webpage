@@ -19,3 +19,12 @@ function check() {
     alert("Warning, some information are missing! Fill all fields properly.");
   return ok;
 }
+
+function showmore(nation) {
+  var el = document.getElementById(nation + "-details");
+  if (el.style.display === "none") {
+    el.style.display = "block";
+  } else {
+    el.style.display = "none";
+  }
+}
