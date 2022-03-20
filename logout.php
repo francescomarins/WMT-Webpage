@@ -10,6 +10,7 @@
   <title>VOTESxEUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
+  <link rel="stylesheet" href="bg.css" type="text/css">
   <?php
   session_start();
   if($_POST['logout'] == "logout") {
