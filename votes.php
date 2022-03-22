@@ -27,16 +27,21 @@
     array_push($artists, $artist);
   }
 
-  $userquery = "SELECT * FROM users WHERE email=" . $_SESSION['logged'];
-  $userresult = mysqli_query($con, userquery);
-  $userrow = mysqli_fetch_assoc($userresult);
-  $uservotes = $userrow['available_votes'];
-
   ?>
 
 </head>
   <body>
-    <?php session_start(); include("passwords.php"); check_logged(); ?>
+    <?php
+    session_start();
+    include("passwords.php");
+    check_logged();
+
+    $userquery = "SELECT * FROM users WHERE email='" . $_SESSION['logged'] . "'";
+    $userresult = mysqli_query($con, $userquery);
+    $userrow = mysqli_fetch_assoc($userresult);
+    $uservotes = $userrow['available_votes'];
+    ?>
+
     <nav id="menu">
       <a class="logo" href="index.php">VOTESxEUROVISION</a>
       <a href="index.php">Home</a>
@@ -50,9 +55,8 @@
       <h1>Eurovision Voting Page</h1>
       <h2>2022</h2>
     </header>
-    <section id="voting-container">
-      <?php echo "<p> Hi " . $userrow['email'] . "</p>"; ?>
-      <p> Welcome to the voting page! You still have <?php echo "$uservotes"; ?> available! </p>
+    <section id="voting-container" class="centred">
+      <h2> Welcome to the voting page! You still have <?php echo "$uservotes"; ?> votes available! </h2>
     </section>
   </body>
 </html>
