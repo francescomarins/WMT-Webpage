@@ -10,6 +10,7 @@
   <title>VOTESxEUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
+  <link rel="stylesheet" href="bg.css" type="text/css">
   <?php
 
   include("artist.php");
@@ -26,7 +27,6 @@
     $artist = new Artist($row['name'], $row['link'], $row['song'], $row['songlink'], $row['country']);
     array_push($artists, $artist);
   }
-
   ?>
 
 </head>
@@ -40,6 +40,33 @@
   $userresult = mysqli_query($con, $userquery);
   $userrow = mysqli_fetch_assoc($userresult);
   $uservotes = $userrow['available_votes'];
+
+  if($_POST['operation'] == "voting") {
+    if ($_POST['country'] == "");
+    else if ($uservotes == 0) {
+      $novotesleft = true;
+    } else if ($userrow['country'] == $_POST['country']) {
+      $wrongvote = true;
+    } else {
+      $one = 1;
+      $uservotes = $uservotes - $one;
+      $userquery = "UPDATE users SET available_votes ='" . $uservotes . "' WHERE email ='" . $userrow['email'] . "'";
+      $userresult = mysqli_query($con, $userquery);
+      $checkpresencequery = "SELECT * FROM votes WHERE country = '" . $_POST['country'] . "' AND user_country = '" . $userrow['country'] . "'";
+      $checkpresenceresult = mysqli_query($con, $checkpresencequery);
+      if(mysqli_num_rows($checkpresenceresult) == 0) {
+        $votequery = "INSERT INTO votes (user_country, country, votes) VALUES ('" . $userrow['country'] . "','" . $_POST['country'] . "','" . $one . "')";
+        $voteresult = mysqli_query($con, $votequery);
+      }
+      else {
+        $checkpresencerow = mysqli_fetch_assoc($checkpresenceresult);
+        $votesofcandidate = (int)$checkpresencerow['votes'] + $one;
+        $votequery = "UPDATE votes SET votes = '" . $votesofcandidate . "' WHERE votes.user_country = '" . $userrow['country'] . "' AND votes.country = '" . $_POST['country'] . "'";
+        $voteresult = mysqli_query($con, $votequery);
+      }
+
+    }
+  };
   ?>
 
   <nav id="menu">
@@ -59,9 +86,17 @@
     <h2> Welcome to the voting page! You still have <?php echo "$uservotes"; ?> votes available! </h2>
     <p> In this page you can express the preference for a singer. It is possible to express one vote at a time.
       If you want to give all your twenty votes to a singer you must repeat the procedure all the times.
+      Remember that you cannot vote for an artist that represents your country.
       After voting you can see the live ranking the statistics' page.
     </p>
+
     <form class="voting-form centred" action="votes.php" method="post">
+      <?php
+      if ($novotesleft == true)
+      echo "<p> YOU HAVE NO MORE VOTES AVAILABLE </p>";
+      else if ($wrongvote)
+      echo "<p> YOU CANNOT VOTE FOR AN ARTIST OF YOUR OWN COUNTRY </p>";
+      ?>
       <select name="country" id="country">
         <option value="" disabled selected>Select a country</option>
         <?php
