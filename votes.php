@@ -73,7 +73,8 @@
     <a class="logo" href="index.php">VOTESxEUROVISION</a>
     <a href="index.php">Home</a>
     <a href="partecipants.php">Participants</a>
-    <a href="">Statistics</a>
+    <a href="votes.php">Voting</a>
+    <a href="statistics.php">Statistics</a>
     <form action="logout.php" method="post">
       <button type="submit" id="logout" name="logout" value="logout">Logout</button>
     </form>

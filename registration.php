@@ -38,7 +38,7 @@
     <a class="logo" href="index.php">VOTESxEUROVISION</a>
     <a href="index.php">Home</a>
     <a href="partecipants.php">Participants</a>
-    <a href="">Statistics</a>
+    <a href="statistics.php">Statistics</a>
     <button type="button" name="vote" onclick="document.location='votes.php';">Vote!</button>
   </nav>
   <section id="reg-container">
