@@ -148,6 +148,12 @@ iframe {
 .country {
   float: right;
 }
+
+.countries_displayer {
+  width: 30%;
+  float: left;
+}
+
 .city {
     list-style: url("img/city.png");
   }
