@@ -1,23 +1,23 @@
 @font-face {
-    font-family: 'rieslingregular';
-    src: url('fonts/riesling-webfont.woff2') format('woff2'),
-         url('fonts/riesling-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'rieslingregular';
+  src: url('fonts/riesling-webfont.woff2') format('woff2'),
+  url('fonts/riesling-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('fonts/Dosis-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Dosis';
+  src: url('fonts/Dosis-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Anton';
-    src: url('fonts/Anton-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Anton';
+  src: url('fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -52,7 +52,7 @@ nav a {
   padding: 1%;
 }
 nav a:hover {
-    color: white;
+  color: white;
 }
 a {
   color: white;
@@ -61,18 +61,18 @@ a:hover {
   filter: drop-shadow(0px 0px 1px lightgrey);
 }
 button {
-color: white;
-background-color: rgb(255, 20, 147, 0.8);
-border-radius: 3px;
-border-width: 0;
-font-size: 1em;
-font-weight: 700;
-min-width: 10%;
-min-height: 3em;
+  color: white;
+  background-color: rgb(255, 20, 147, 0.8);
+  border-radius: 3px;
+  border-width: 0;
+  font-size: 1em;
+  font-weight: 700;
+  min-width: 10%;
+  min-height: 3em;
 }
 select {
-border-radius: 3px;
-border-width: 0;
+  border-radius: 3px;
+  border-width: 0;
 }
 button:hover {
   filter: drop-shadow(0px 0px 4px white);
@@ -123,13 +123,13 @@ h3 {
   margin-right: 2.5%;
 }
 .artist {
-background-image: linear-gradient(to right, blueviolet, lightseagreen);
-border-radius: 70em;
-padding: .3em 1em;
-color: white;
-cursor: pointer;
-margin-top: 0.5em;
-margin-bottom: 0.5em;
+  background-image: linear-gradient(to right, blueviolet, lightseagreen);
+  border-radius: 70em;
+  padding: .3em 1em;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 .details {
   /* border-radius: 2em;
@@ -151,17 +151,28 @@ iframe {
 
 .countries_container {
   width: 30%;
+  margin-left: 15%;
   float: left;
 }
 .artists_container {
-  width: 70%;
-  margin-left: 30%;
-  align-items: center;
+  text-align: center;
+  width:30%;
+  margin-left: 55%;
+}
+summary {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  padding: 1%;
+  margin: 1%;
+  border-radius: 10px;
+}
+
+summary[name="1"], summary[name="2"], summary[name="3"] {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90%);
 }
 
 .city {
-    list-style: url("img/city.png");
-  }
+  list-style: url("img/city.png");
+}
 .ig {
   list-style: url("img/instagram.png");
 }

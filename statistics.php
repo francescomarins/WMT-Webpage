@@ -36,11 +36,15 @@
   }
 
   $votesperartist = array();
+  foreach (array_keys($artists) as $key) {
+    $votesperartist["$key"] = 0;
+  }
   $result = mysqli_query($con, "SELECT `country`, SUM(votes) as tot_votes FROM votes GROUP BY country ORDER BY 2 DESC");
   while($row = mysqli_fetch_assoc($result)) {
     $country = $row['country'];
-    $votesperartist["$country"] = $row['tot_votes'];
+    $votesperartist["$country"] = (int)$row['tot_votes'];
   }
+  arsort($votesperartist);
   ?>
   <script type="text/javascript">
   function display_totals() {
@@ -97,63 +101,6 @@
 
     Plotly.newPlot('countriespie', data, layout);
   }
-
-  function display_ranking(country) {
-    let fors = document.getElementsByClassName("for");
-    let for_values = new Array();
-    let for_countries = new Array();
-    let total = 0;
-
-    for (var i = 0; i < fors.length; i++) {
-      var item = fors[i];
-      total = total + parseInt(item.innerHTML);
-    }
-
-    var limit = (fors.length < 5) ? fors.length : 5;
-    for (var i = 0; i < limit; i++) {
-      var item = fors[i];
-      for_countries[i] = item.getAttribute('name');
-      for_values[i] = parseInt(item.innerHTML)*1.0 / total * 100;
-    }
-
-    if(fors.length > 5) {
-      for_countries[5] = "Others";
-      var others_value = 0;
-      for (var i = 5; i < fors.length; i++) {
-        var item = fors[i];
-        others_value = others_value + parseInt(item.innerHTML);
-      }
-      for_values[5] = others_value*1.0 / total * 100;
-    }
-
-    var colours_array = ["90e0ef","48cae4","00b4d8","0096c7","0077b6","023e8a","03045e"];
-
-    var data = [{
-      values: for_values,
-      labels: for_countries,
-      type: 'pie',
-      hoverinfo: 'label+percent',
-      marker: {
-        colors: colours_array
-      }
-    }];
-
-    var layout = {
-      paper_bgcolor: 'rgba(0,0,0,0)',
-      plot_bgcolor: 'rgba(0,0,0,0)',
-      font: {
-        color: 'white'
-      },
-      hoverlabel: {
-        bordercolor: 'white'
-      },
-      showlegend: false
-    }
-
-    el_name = country + "_pie";
-    Plotly.newPlot(el_name, data, layout);
-  }
-
   </script>
 </head>
 <body>
@@ -187,15 +134,20 @@
       </script>
   </section>
   <section id="artists_container" class="artists_container">
+    <h2>Ranking</h2>
     <?php
     $order = 1;
+    $currentvotes = 0;
+    $previousvotes = -1;
     foreach(array_keys($votesperartist) as $key) {
-      echo "<details><summary>$order. $key</summary>";
-      echo "<div name='$key' class='for' hidden>$votesperartist[$key]</div>";
-      echo "<p id='$key"."_pie'></p>";
+        $currentvotes = $votesperartist[$key];
+      if($currentvotes != $previousvotes && $previousvotes != -1) {
+        $order++;
+      }
+      echo "<details><summary name='$order'>$order. $key</summary>";
+      echo "<table><th>Singer</th><th>Song</th><th>Votes</th><tr><td>" . $artists[$key]->get_name() ."</td><td>" . $artists[$key]->get_song() ."</td><td name='$key' class='for'>$votesperartist[$key]</td></tr></table>";
       echo "</details>";
-      $order++;
-      echo "<script type='text/javascript'>display_ranking('".$key."');</script>";
+      $previousvotes = $currentvotes;
     }
     ?>
   </section>
