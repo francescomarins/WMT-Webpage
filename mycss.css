@@ -149,9 +149,14 @@ iframe {
   float: right;
 }
 
-.countries_displayer {
+.countries_container {
   width: 30%;
   float: left;
+}
+.artists_container {
+  width: 70%;
+  margin-left: 30%;
+  align-items: center;
 }
 
 .city {
