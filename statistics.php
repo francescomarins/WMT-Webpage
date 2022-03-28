@@ -95,8 +95,7 @@
       },
       hoverlabel: {
         bordercolor: 'white'
-      },
-      showlegend: false
+      }
     }
 
     Plotly.newPlot('countriespie', data, layout);
@@ -116,7 +115,15 @@
     <h2>2022</h2>
   </header>
   <section id="countries_container" class="countries_container">
+    <h1>Votes' provenience</h1>
+    <p>
+      This section containes a pie chart which graphically shows where votes come from.<br>
+      In particular what is provided is the number of users that expressed at least one vote.
+    </p>
       <div id="countriespie"></div>
+      <p>
+        The chart only shows percentages so if you are interested click the button below and all details will be displayed.
+      </p>
       <details>
       <summary>Number of user from each country</summary>
       <table id="countries_votes">
