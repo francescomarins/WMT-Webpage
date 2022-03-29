@@ -98,7 +98,9 @@
       }
     }
 
-    Plotly.newPlot('countriespie', data, layout);
+    var config = {responsive: true}
+
+    Plotly.newPlot('countriespie', data, layout, config);
   }
   </script>
 </head>
