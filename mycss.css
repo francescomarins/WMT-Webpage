@@ -72,6 +72,7 @@ button {
   min-height: 3em;
 }
 select {
+  width: 40%;
   border-radius: 3px;
   border-width: 0;
 }
@@ -85,9 +86,21 @@ form.centred {
 }
 form.centred * {
   min-width: 40%;
-  margin: 1%;
+  margin-top: 1%;
   padding: 1%;
 }
+
+form.centred button {
+  margin-top: 3%;
+}
+article.button-container {
+  margin-top: 1%;
+  text-align: center;
+}
+article.button-container * {
+  margin-top: 1%;
+}
+
 header {
   background-image: url("img/bgwave.png");
   background-size: auto;

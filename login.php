@@ -53,7 +53,11 @@
         <button type="submit" name="operation" value="login" onclick="check();">Login</button>
       </form>
     </article>
+    <article class="button-container">
+      Aren't you registered?<br>
+        <button type="button" onclick="document.location='registration.php';">Sign up</button>
+    </article>
   </section>
-  <button type="button" id="show" name="show" onclick="document.location='registration.php';">Sign up</button>
+
 </body>
 </html>

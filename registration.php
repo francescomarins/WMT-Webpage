@@ -308,7 +308,11 @@
         ?>
       </form>
     </article>
+    <article class="button-container">
+      Are you already registered?<br>
+        <button type="button" onclick="document.location='login.php';">Sign in</button>
+    </article>
   </section>
-  <button type="button" id="show" name="show" onclick="document.location='login.php';">Sign in</button>
+
 </body>
 </html>
