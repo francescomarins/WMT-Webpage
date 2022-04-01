@@ -152,7 +152,26 @@ iframe {
 
 details {
   text-align: center;
-  align-items: center;
+}
+
+details table {
+  width: 100%;
+}
+
+details table td {
+  border-top: 1px solid lightgrey;
+}
+
+td.name-cell {
+  width:40%;
+}
+
+td.song-cell {
+  width:30%;
+}
+
+td.votes-cell {
+  width:30%;
 }
 
 .countries_container {
@@ -178,16 +197,12 @@ summary {
 }
 
 summary[name] {
-  width: 100%;
-  background-color: #508bed;
   background-image: linear-gradient(135deg, #508bed 0%, #b073ce 100%);
 }
 
 summary[name="1"], summary[name="2"], summary[name="3"] {
-  background-color: #3e84f7;
   background-image: linear-gradient(135deg, #3e84f7 0%, #ad65d0 100%);
   border-color: white;
-  border-width: 3px;
 }
 
 .city {
@@ -208,4 +223,13 @@ footer {
   /* nav { font-size: 0.8em; }
   button { font-size: 0.9em; } */
   form.centred * { min-width: 80%; }
+  .countries_container {
+    width: 90%;
+    margin: auto;
+    float: none;
+  }
+  .artists_container {
+    width: 90%;
+    margin: auto;
+  }
 }

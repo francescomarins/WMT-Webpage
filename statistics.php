@@ -154,7 +154,7 @@
         $order++;
       }
       echo "<details><summary name='$order'>$order. $key</summary>";
-      echo "<table><th>Singer</th><th>Song</th><th>Votes</th><tr><td>" . $artists[$key]->get_name() ."</td><td>" . $artists[$key]->get_song() ."</td><td name='$key' class='for'>$votesperartist[$key]</td></tr></table>";
+      echo "<table><th>Singer</th><th>Song</th><th>Votes</th><tr><td class='name-cell'>" . $artists[$key]->get_name() ."</td><td class='song-cell'>" . $artists[$key]->get_song() ."</td><td name='$key' class='for votes-cell'>$votesperartist[$key]</td></tr></table>";
       echo "</details>";
       $previousvotes = $currentvotes;
     }
