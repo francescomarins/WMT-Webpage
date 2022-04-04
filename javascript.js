@@ -20,15 +20,6 @@ function check() {
   return ok;
 }
 
-function showmore(nation) {
-  var el = document.getElementById(nation + "-details");
-  if (el.style.display === "none") {
-    el.style.display = "block";
-  } else {
-    el.style.display = "none";
-  }
-}
-
 function display_totals() {
   let froms = document.getElementsByClassName("from");
   let from_values = new Array();

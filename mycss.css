@@ -139,26 +139,36 @@ h3 {
 .artist {
   background-image: linear-gradient(to right, blueviolet, lightseagreen);
   border-radius: 70em;
-  padding: .3em 1em;
+  padding: .4em 1em;
   color: white;
+  font-size: 1.2em;
   cursor: pointer;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
-.details {
-  /* border-radius: 2em;
-  border: solid blueviolet; */
-  padding: 1%;
-  display: none;
+section.artists-container .iframe-container, h3{
   text-align: center;
 }
-.about_the_artist {
-  width: 50px;
-}
-iframe {
+
+section.artists-container iframe {
   width: 711px;
   height: 400px;
 }
+
+section.artists-container a.column1 {
+  display: inline-block;
+  margin-left: 10%;
+  width: 75%;
+  text-decoration: none;
+}
+
+section.artists-container a.column2 {
+  display: inline-block;
+  margin-left: 15%;
+  width: 75%;
+  text-decoration: none;
+}
+
 .country {
   float: right;
 }

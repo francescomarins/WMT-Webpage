@@ -144,6 +144,8 @@
   </section>
   <section id="artists_container" class="artists_container">
     <h2>Ranking</h2>
+    <p>The current positioning of all countries is the one that follows. 
+      Click on the country name to show the name of the singer, the title of the song and the votes that it received.</p>
     <?php
     $order = 1;
     $currentvotes = 0;
