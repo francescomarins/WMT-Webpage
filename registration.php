@@ -308,6 +308,7 @@
         ?>
       </form>
     </article>
+    <hr class="half-row">
     <article class="button-container">
       Are you already registered?<br>
         <button type="button" onclick="document.location='login.php';">Sign in</button>

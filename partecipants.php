@@ -23,7 +23,7 @@
   $artists = array();
   $result = mysqli_query($con, "SELECT * FROM participants");
   while($row = mysqli_fetch_assoc($result)){
-    $artist = new Artist($row['name'], $row['link'], $row['song'], $row['songlink'], $row['country']);
+    $artist = new Artist($row['name'], $row['link'], $row['song'], $row['country']);
     array_push($artists, $artist);
   }
   ?>
@@ -33,7 +33,7 @@
   <nav id="menu">
     <a class="logo" href="index.php">VOTESxEUROVISION</a>
     <a href="index.php">Home</a>
-    <a href="partecipants.php">Participants</a>
+    <a href="partecipants.php" class="currentpage">Participants</a>
     <a href="statistics.php">Statistics</a>
     <button type="button" class="vote" name="vote" onclick="document.location ='votes.php';">Vote!</button>
   </nav>
@@ -42,19 +42,22 @@
     <h2>2022</h2>
   </header>
   <section id="artists-container" class="artists-container">
-    <h3>See the list of all the artists who take part in the copetition. Click on their name to know something more about them.</h3>
     <article class="iframe-container">
-      <iframe src="https://www.youtube.com/embed/nrOaYo3I-9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      <h3>Listen to all the songs partaking in the competition, the video below contains all of them!</h3>
+      <iframe id="allsongs " src="https://www.youtube.com/embed/nrOaYo3I-9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
     </article>
-  <?php
-      $column = 1;
-  foreach ($artists as $singer) {
-    echo '<a class="artist column' . $column . '" href=' . $singer->get_link() .'>' . $singer->get_name() . ' - ' . $singer->get_song() . '<span class="country">' . $singer->get_country() . '</span></a>';
-    if($column == 1)
-      $column++;
-    else {
-      $column = 1;
-    }
-  } ?>
+    <article class="list-of-artists">
+      <h3>See the list of all contestants. Click on their names to know something more about them.</h3>
+      <?php
+        $column = 1;
+      foreach ($artists as $singer) {
+      echo '<a class="artist column' . $column . '" href=' . $singer->get_link() .'>' . $singer->get_name() . ' - ' . $singer->get_song() . '<span class="country">' . $singer->get_country() . '</span></a>';
+      if($column == 1)
+        $column++;
+      else {
+        $column = 1;
+      }
+      } ?>
+    </article>
 </section>
 </body>

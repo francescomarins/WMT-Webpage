@@ -10,12 +10,13 @@
   <title>VOTESxEUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <nav id="menu">
     <a class="logo" href="index.php">VOTESxEUROVISION</a>
-    <a href="index.php">Home</a>
+    <a href="index.php" class="currentpage">Home</a>
     <a href="partecipants.php">Participants</a>
     <a href="statistics.php">Statistics</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
@@ -44,16 +45,12 @@
         Everyone can express a vote for each artist on this website for free.
       </p>
     </article>
-    <aside id="sidebar">
-      <h3>Some information</h3>
-      <ul>
-        <li class="city"><a href="http://www.comune.torino.it/">Host city</a></li>
-        <li class="ig"><a href="https://www.instagram.com/eurovision">Eurovision Song Contest</a></li>
-        <li><a href="">San Pietro in Ciel d'Oro</a></li>
-        <li><a href="">Certosa</a></li>
-      </ul>
-    </aside>
     <footer id="footer">
+      <h3>Some external links</h3>
+        <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
+        <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a></li>
+        <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
+        <a class="fa fa-fanta" href="https://fantaeurovision.com" title="Fantaeurovision"></a>
       <p>
         &copy; All rights reserved - 2022
       </p>

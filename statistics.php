@@ -24,7 +24,7 @@
   $artists = array();
   $result = mysqli_query($con, "SELECT * FROM participants");
   while($row = mysqli_fetch_assoc($result)){
-    $artist = new Artist($row['name'], $row['link'], $row['song'], $row['songlink'], $row['country']);
+    $artist = new Artist($row['name'], $row['link'], $row['song'], $row['country']);
     $artists[$row['country']] = $artist;
   }
 
@@ -109,7 +109,7 @@
     <a class="logo" href="index.php">VOTESxEUROVISION</a>
     <a href="index.php">Home</a>
     <a href="partecipants.php">Participants</a>
-    <a href="statistics.php">Statistics</a>
+    <a href="statistics.php" class="currentpage">Statistics</a>
     <button type="button" class="vote" name="vote" onclick="document.location ='votes.php';">Vote!</button>
   </nav>
   <header id="header">
@@ -127,7 +127,7 @@
         The chart only shows percentages so if you are interested click the button below and all details will be displayed.
       </p>
       <details>
-      <summary>Number of user from each country</summary>
+      <summary>Number of users from each country</summary>
       <table id="countries_votes">
         <?php
         $counter = 0;
@@ -144,7 +144,7 @@
   </section>
   <section id="artists_container" class="artists_container">
     <h2>Ranking</h2>
-    <p>The current positioning of all countries is the one that follows. 
+    <p>The current positioning of all countries is the one that follows.
       Click on the country name to show the name of the singer, the title of the song and the votes that it received.</p>
     <?php
     $order = 1;

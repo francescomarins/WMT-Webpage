@@ -24,7 +24,7 @@
   $artists = array();
   $result = mysqli_query($con, "SELECT * FROM participants");
   while($row = mysqli_fetch_assoc($result)){
-    $artist = new Artist($row['name'], $row['link'], $row['song'], $row['songlink'], $row['country']);
+    $artist = new Artist($row['name'], $row['link'], $row['song'], $row['country']);
     array_push($artists, $artist);
   }
   ?>
