@@ -11,12 +11,23 @@ function exists(input) {
   return atLeastOneChar;
 }
 
-function check() {
+function check_login() {
   var ok = false;
   if(exists(document.getElementById("email").value) && exists(document.getElementById("password").value))
   ok = true;
   else
-  alert("Warning, some information are missing! Fill all fields properly.");
+  alert("Warning, some information are missing!\nMake sure to fill all fields properly.");
+  return ok;
+}
+
+function check_reg() {
+  var ok = false;
+  if(exists(document.getElementById("email").value) && exists(document.getElementById("password").value)) {
+    if(exists(document.getElementById("country").value))
+    ok = true;
+  }
+  else
+    alert("Warning, some information are missing!\nMake sure you fill all fields properly and select the country.");
   return ok;
 }
 

@@ -41,7 +41,7 @@
       <h1>Login</h1>
     </header>
     <article id="login">
-      <form name="login-form" class="login-form centred" action="login.php" method="post">
+      <form name="login-form" class="login-form centred" action="login.php" method="post" onsubmit="return check_login();">
         <?php
           if($wrongpasswd)
           echo "<p>Wrong email or password!</p>"
@@ -50,7 +50,7 @@
         <input type="email" id="email" name="email"><br>
         <label for="password">Password</label> <br>
         <input type="password" id="password" name="password"><br>
-        <button type="submit" name="operation" value="login" onclick="check();">Login</button>
+        <button type="submit" name="operation" value="login">Login</button>
       </form>
     </article>
     <hr class="half-row">

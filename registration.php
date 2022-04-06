@@ -11,6 +11,7 @@
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="bg.css" type="text/css">
+  <script type="text/javascript" src="javascript.js"></script>
   <?php
   if($_POST['operation'] == "registration") {
     if(empty(trim($_POST["email"])) || empty(trim($_POST["password"])) || empty($_POST["country"])) {
@@ -46,7 +47,7 @@
       <h1>Registration</h1>
     </header>
     <article id="reg">
-      <form name="reg-form" class="reg-form centred" action="registration.php" method="post">
+      <form name="reg-form" class="reg-form centred" action="registration.php" method="post" onsubmit="return check_reg();">
         <?php
         if($userpresent)
         echo "<p>Email already registered. Click on the button below on the left to log in!</p>"
@@ -56,7 +57,7 @@
         <label for="password" >Password</label> <br>
         <input type="password" id="password" name="password"><br>
         <label for="country">Country</label> <br>
-        <select name="country">
+        <select id="country" name="country">
           <option value="" disabled selected>Select a country</option>
           <option value="Afghanistan">Afghanistan</option>
           <option value="Albania">Albania</option>
@@ -298,7 +299,7 @@
           <option value="Zambia">Zambia</option>
           <option value="Zimbabwe">Zimbabwe</option>
         </select><br>
-        <button type="submit" name="operation" value="registration" onclick="check();">Sign up</button>
+        <button type="submit" name="operation" value="registration">Sign up</button>
         <?php
         if($result)
         echo "<p>Successful registration. Please log in to enter the website!</p>";
