@@ -7,15 +7,16 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <title>VOTESxEUROVISION</title>
+  <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+  <a href="#container" class="skip-to-main-content">Skip to main content</a>
   <nav id="menu">
-    <a class="logo" href="index.php">VOTESxEUROVISION</a>
+    <a class="logo" href="index.php">VOTES4EUROVISION</a>
     <a href="index.php" class="currentpage">Home</a>
     <a href="partecipants.php">Participants</a>
     <a href="statistics.php">Statistics</a>
@@ -23,7 +24,7 @@
   </nav>
   <section id="container">
     <header id="header">
-      <h1 class="logo">VOTESXEUROVISION</h1>
+      <h1 class="logo">VOTES4EUROVISION</h1>
       <h2>2022</h2>
     </header>
     <article id="intro">

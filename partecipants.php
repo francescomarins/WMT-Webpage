@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <title>VOTESxEUROVISION</title>
+  <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <script type="text/javascript" src="javascript.js"></script>  <?php
@@ -31,7 +31,7 @@
 
 <body>
   <nav id="menu">
-    <a class="logo" href="index.php">VOTESxEUROVISION</a>
+    <a class="logo" href="index.php">VOTES4EUROVISION</a>
     <a href="index.php">Home</a>
     <a href="partecipants.php" class="currentpage">Participants</a>
     <a href="statistics.php">Statistics</a>
