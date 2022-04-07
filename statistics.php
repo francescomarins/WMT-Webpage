@@ -2,15 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
 
   <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <script src="plotly-2.9.0.min.js"></script>
-  <script type="text/javascript" src="javascript.js"></script>
+  <script src="javascript.js"></script>
   <?php
 
   include("artist.php");
@@ -46,7 +43,7 @@
   }
   arsort($votesperartist);
   ?>
-  <script type="text/javascript">
+  <script>
   function display_totals() {
     let froms = document.getElementsByClassName("from");
     let from_values = new Array();
@@ -61,7 +58,7 @@
     var limit = (froms.length < 5) ? froms.length : 5;
     for (var i = 0; i < limit; i++) {
       var item = froms[i];
-      from_countries[i] = item.getAttribute('name');
+      from_countries[i] = item.getAttribute('data-country');
       from_values[i] = parseInt(item.innerHTML)*1.0 / total * 100;
     }
 
@@ -117,7 +114,7 @@
     <h2>2022</h2>
   </header>
   <section id="countries_container" class="countries_container">
-    <h1>Votes' provenience</h1>
+    <h2>Votes' provenience</h2>
     <p>
       This section containes a pie chart which graphically shows where votes come from.<br>
       In particular what is provided is the number of users that expressed at least one vote.
@@ -133,7 +130,7 @@
         $counter = 0;
         echo "<tr><th>Country</th><th>Users</th></tr>";
         foreach(array_keys($votespercountry) as $key) {
-          echo "<tr><td>$key</td> <td name='$key' class='from'>$votespercountry[$key]</td></tr>";
+          echo "<tr><td>$key</td> <td><div class='from' data-country='$key'>$votespercountry[$key]</div></td></tr>";
         }
         ?>
       </table>
@@ -145,7 +142,7 @@
   <section id="artists_container" class="artists_container">
     <h2>Ranking</h2>
     <p>The current positioning of all countries is the one that follows.
-      Click on the country name to show the name of the singer, the title of the song and the votes that it received.</p>
+      Click on the country  to show the name of the singer, the title of the song and the votes that it received.</p>
     <?php
     $order = 1;
     $currentvotes = 0;
@@ -155,8 +152,11 @@
       if($currentvotes != $previousvotes && $previousvotes != -1) {
         $order++;
       }
-      echo "<details><summary name='$order'>$order. $key</summary>";
-      echo "<table><th>Singer</th><th>Song</th><th>Votes</th><tr><td class='name-cell'>" . $artists[$key]->get_name() ."</td><td class='song-cell'>" . $artists[$key]->get_song() ."</td><td name='$key' class='for votes-cell'>$votesperartist[$key]</td></tr></table>";
+      echo "<details><summary data-order='$order'>$order. $key</summary>";
+      echo "<table><tr><th>Singer</th><th>Song</th><th>Votes</th></tr>";
+      echo "<tr><td class='name-cell'>" . $artists[$key]->get_name() .
+              "</td><td class='song-cell'>" . $artists[$key]->get_song() .
+                "</td><td class='votes-cell'><div class='for' data-artist='$key'>$votesperartist[$key]</div></td></tr></table>";
       echo "</details>";
       $previousvotes = $currentvotes;
     }

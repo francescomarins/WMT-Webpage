@@ -2,16 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-
   <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="bg.css" type="text/css">
-  <script type="text/javascript" src="javascript.js"></script>
+  <script src="javascript.js"></script>
   <?php
   if($_POST['operation'] == "registration") {
     if(empty(trim($_POST["email"])) || empty(trim($_POST["password"])) || empty($_POST["country"])) {
@@ -47,6 +42,7 @@
       <h1>Registration</h1>
     </header>
     <article id="reg">
+        <h3>Register to access the protected area and to vote for your favourite singer</h3>
       <form name="reg-form" class="reg-form centred" action="registration.php" method="post" onsubmit="return check_reg();">
         <?php
         if($userpresent)
@@ -311,7 +307,7 @@
     </article>
     <hr class="half-row">
     <article class="button-container">
-      Are you already registered?<br>
+    <h3>Have you got an account?</h3>
         <button type="button" onclick="document.location='login.php';">Sign in</button>
     </article>
   </section>

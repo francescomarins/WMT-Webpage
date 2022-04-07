@@ -2,11 +2,6 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-
   <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
@@ -51,7 +46,7 @@
     <footer id="footer">
       <h3>Some external links</h3>
         <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
-        <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a></li>
+        <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a>
         <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
       <p>
         &copy; All rights reserved - 2022

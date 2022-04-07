@@ -2,15 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-
   <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
-  <script type="text/javascript" src="javascript.js"></script>  <?php
+  <script src="javascript.js"></script>  <?php
 
   include("artist.php");
 
@@ -43,8 +38,9 @@
   </header>
   <section id="artists-container" class="artists-container">
     <article class="iframe-container">
-      <h3>Listen to all the songs partaking in the competition, the video below contains all of them!</h3>
-      <iframe id="allsongs " src="https://www.youtube.com/embed/nrOaYo3I-9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      <h3>All 40 participating songs</h3>
+      <p>Listen to all the songs partaking in the competition, the video below contains all of them!</p>
+      <iframe id="allsongs" src="https://www.youtube.com/embed/nrOaYo3I-9A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
     </article>
     <article class="list-of-artists">
       <h3>See the list of all contestants. Click on their names to know something more about them.</h3>

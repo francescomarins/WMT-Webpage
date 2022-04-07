@@ -45,7 +45,7 @@ function display_totals() {
   var limit = (froms.length < 5) ? froms.length : 5;
   for (var i = 0; i < limit; i++) {
     var item = froms[i];
-    from_countries[i] = item.getAttribute('name');
+    from_countries[i] = item.getAttribute('data-country');
     from_values[i] = parseInt(item.innerHTML)*1.0 / total * 100;
   }
 

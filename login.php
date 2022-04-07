@@ -2,16 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-
   <title>VOTES4EUROVISION</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="bg.css" type="text/css">
-  <script type="text/javascript" src="javascript.js"></script>
+  <script src="javascript.js"></script>
   <?php
   session_start();
   if($_POST['operation'] == "login") {
@@ -41,6 +36,7 @@
       <h1>Login</h1>
     </header>
     <article id="login">
+      <h3>Log in to access the website</h3>
       <form name="login-form" class="login-form centred" action="login.php" method="post" onsubmit="return check_login();">
         <?php
           if($wrongpasswd)
@@ -55,7 +51,7 @@
     </article>
     <hr class="half-row">
     <article class="button-container">
-      Aren't you registered?<br>
+      <h3>Haven't you registered yet?</h3>
         <button type="button" onclick="document.location='registration.php';">Sign up</button>
     </article>
   </section>
