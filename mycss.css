@@ -33,7 +33,7 @@ body {
   background-image: linear-gradient(to bottom right, black, steelblue, slateblue, rebeccaPurple);
   font-family: "Raleway Thin";
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .skip-to-main-content {
@@ -110,12 +110,22 @@ img[id="maneskin"] {
   display: inline-block;
   height: 30vw;
 }
-.intro * {
+
+.intro *, .aim * {
   padding-left: 2%;
   padding-right: 2%;
 }
+
 .aim {
-  width: 50%;
+  display: inline-block;
+  height: 30vw;
+}
+
+img[id="vote"] {
+  width: 20vw;
+  height: 30vw;
+  float: right;
+  border-radius: 3vw;
 }
 
 select {

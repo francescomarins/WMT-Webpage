@@ -15,6 +15,7 @@
   ?>
 </head>
 <body>
+  <a href="#logout-container" class="skip-to-main-content">Skip to main content</a>
   <nav id="menu">
     <a class="logo" href="index.php">VOTES4EUROVISION</a>
     <a href="index.php">Home</a>
@@ -22,9 +23,11 @@
     <a href="statistics.php">Statistics</a>
     <button type="button" class="vote" name="vote" onclick="document.location='votes.php';">Vote!</button>
   </nav>
+  <section id="logout-container">
   <h3>Successful logout</h3>
   <div class="align-center">
     <p>You have correctly logged out.</p>
     <p>Use the navigation bar if you want to continue your navigation on the website.</p>
   </div>
+  </section>
 </body>

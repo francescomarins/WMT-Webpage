@@ -30,6 +30,7 @@
   ?>
 </head>
 <body>
+  <a href="#reg-container" class="skip-to-main-content">Skip to main content</a>
   <nav id="menu">
     <a class="logo" href="index.php">VOTES4EUROVISION</a>
     <a href="index.php">Home</a>

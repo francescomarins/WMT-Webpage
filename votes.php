@@ -26,6 +26,8 @@
 
 </head>
 <body>
+  <a href="#header" class="skip-to-main-content">Skip to main content</a>
+
   <?php
   session_start();
   include("passwords.php");

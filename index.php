@@ -11,7 +11,7 @@
 <body>
   <a href="#container" class="skip-to-main-content">Skip to main content</a>
   <nav id="menu">
-    <a class="logo" href="index.php">VOTES4EUROVISION</a>
+    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
     <a href="index.php" class="currentpage">Home</a>
     <a href="partecipants.php">Participants</a>
     <a href="statistics.php">Statistics</a>
@@ -35,8 +35,8 @@
     </article>
     <hr>
     <article class="aim" id="aim">
-      <img src="" alt="Raised hands">
-      <h2>What is the aim of this website?</h2>
+        <h2>What is the aim of this website?</h2>
+      <img src="img/vote.jpg" id="vote" alt="Lamp with 'vote' written on it">
       <p>
         This page aims at collecting the popular opinion about ESC songs given that duing the competition
         it is possible to vote only upon a payment. This, instead, is a way to know how results would be
