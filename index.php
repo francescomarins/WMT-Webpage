@@ -27,8 +27,9 @@
       <h1 class="logo">VOTES4EUROVISION</h1>
       <h2>2022</h2>
     </header>
-    <article id="intro">
+    <article class="intro" id="intro">
       <h2>The contest</h2>
+      <img id="maneskin" src="img/maneskin.jpeg" alt="Manekin celebrating their win at Eurovision 2021">
       <p>
         The Eurovision Song Contest 2022 is the upcoming 66th edition of the Eurovision Song Contest.
         It is set to take place in Turin, Italy, following the country's victory at the 2021 contest with the song "Zitti e buoni" by Måneskin.
@@ -38,12 +39,13 @@
       </p>
     </article>
     <hr>
-    <article id="aim">
-      <h2>The aim of this website</h2>
+    <article class="aim" id="aim">
+      <img src="" alt="Raised hands">
+      <h2>What is the aim of this website?</h2>
       <p>
-        This page aims at collecting the popular opinion about ESC performances given that in the official results of the competition
-        audience votes do not competely impact on the outcome. This is just a way to see how different results would be.
-        Everyone can express a vote for each artist on this website for free.
+        This page aims at collecting the popular opinion about ESC songs given that duing the competition
+        it is possible to vote only upon a payment. This, instead, is a way to know how results would be
+        different if voting was free.
       </p>
     </article>
     <footer id="footer">
@@ -51,7 +53,6 @@
         <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
         <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a></li>
         <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
-        <a class="fa fa-fanta" href="https://fantaeurovision.com" title="Fantaeurovision"></a>
       <p>
         &copy; All rights reserved - 2022
       </p>

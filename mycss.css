@@ -33,6 +33,7 @@ body {
   background-image: linear-gradient(to bottom right, black, steelblue, slateblue, rebeccaPurple);
   font-family: "Raleway Thin";
   color: white;
+  font-size: 16px;
 }
 
 .skip-to-main-content {
@@ -88,13 +89,6 @@ a.fa {
 .fa-youtube {
   background: #bb0000;
 }
-.fa-fanta:before {
-  content: url("img/fantaeurovision.png");
-}
-.fa-fanta {
-  background: black;
-}
-
 button {
   color: white;
   background-color: rgb(255, 20, 147, 0.8);
@@ -105,6 +99,25 @@ button {
   min-width: 10%;
   min-height: 3em;
 }
+
+img[id="maneskin"] {
+  width: 40vw;
+  height: 23vw;
+  float: left;
+  border-radius: 3vw;
+}
+.intro {
+  display: inline-block;
+  height: 30vw;
+}
+.intro * {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.aim {
+  width: 50%;
+}
+
 select {
   width: 40%;
   border-radius: 3px;
@@ -291,24 +304,48 @@ footer {
   margin-top: 20vh;
 }
 
+@media screen and (max-width: 900px) {
+    .countries_container {
+      width: 90%;
+      margin: auto;
+      float: none;
+    }
+    .artists_container {
+      width: 90%;
+      margin: auto;
+    }
+}
+
 @media screen and (max-width: 600px) {
-  body { font-size: 0.8em; }
-  /* nav { font-size: 0.8em; }
-  button { font-size: 0.9em; } */
+  body { font-size: 16px; }
+  nav, button { font-size: 0.8em; }
+
+  img[id="maneskin"] {
+    width: 90vw;
+    height: auto;
+    float: none;
+    border-radius: 3vw;
+  }
+
   form.centred * { min-width: 80%; }
 
-  .countries_container {
-    width: 90%;
-    margin: auto;
-    float: none;
-  }
-  .artists_container {
-    width: 90%;
-    margin: auto;
-  }
   /* participants  */
   section.artists-container iframe {
     width: 80vw;
     height: 46vw;
+  }
+
+  section.artists-container a.column1 {
+    display: inline-block;
+    margin-left: 5%;
+    width: 80%;
+    text-decoration: none;
+  }
+
+  section.artists-container a.column2 {
+    display: inline-block;
+    margin-left: 10%;
+    width: 80%;
+    text-decoration: none;
   }
 }
