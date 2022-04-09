@@ -40,7 +40,7 @@ body {
   display: none;
 }
 
-nav {
+.menu {
   z-index: 999;
   background: rgb(0,0,128, 0.2);
   border-radius: 3px;
@@ -51,20 +51,25 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-nav a {
+
+.menu a {
   color: rgb(191, 191, 191);
   font-weight: bold;
+  padding: 1%;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1%;
 }
-nav a:hover {
+.menu .icon {
+  display: none;
+}
+.menu a:hover {
   color: white;
 }
 a {
   color: white;
 }
-nav a.currentpage {
+.menu a.currentpage {
   color: white;
   font-weight: bolder;
 }
@@ -315,20 +320,46 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-    .countries_container {
-      width: 90%;
-      margin: auto;
-      float: none;
-    }
-    .artists_container {
-      width: 90%;
-      margin: auto;
-    }
+  .menu.responsive {
+      display:block;
+  }
+
+  .menu a:not(:first-child), .menu button {display: none;}
+
+  .menu a.icon {
+    float: right;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .menu.responsive a:not(:first-child) {
+    text-align: center;
+  }
+
+  .menu.responsive a.link {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+
+  .countries_container {
+    width: 90%;
+    margin: auto;
+    float: none;
+  }
+  .artists_container {
+    width: 90%;
+    margin: auto;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
-  body { font-size: 16px; }
-  nav, button { font-size: 0.8em; }
+  header h1.logo {
+    font-size: 240%;
+  }
 
   img[id="maneskin"] {
     width: 90vw;

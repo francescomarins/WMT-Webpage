@@ -6,7 +6,9 @@
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="bg.css" type="text/css">
-  <script src="javascript.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js"></script>
+
   <?php
   if($_POST['operation'] == "registration") {
     if(empty(trim($_POST["email"])) || empty(trim($_POST["password"])) || empty($_POST["country"])) {
@@ -31,13 +33,16 @@
 </head>
 <body>
   <a href="#reg-container" class="skip-to-main-content">Skip to main content</a>
-  <nav id="menu">
-    <a class="logo" href="index.php">VOTES4EUROVISION</a>
-    <a href="index.php">Home</a>
-    <a href="partecipants.php">Participants</a>
-    <a href="statistics.php">Statistics</a>
-    <button type="button" name="vote" onclick="document.location='votes.php';">Vote!</button>
-  </nav>
+  <div id="menu" class="menu">
+    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
+    <a href="index.php" class="currentpage link">Home</a>
+    <a href="partecipants.php" class="link">Participants</a>
+    <a href="statistics.php" class="link">Statistics</a>
+    <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
+    <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+      <em class="fa fa-bars"></em>
+    </a>
+  </div>
   <section id="reg-container">
     <header>
       <h1>Registration</h1>

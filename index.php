@@ -6,17 +6,21 @@
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js"></script>
 </head>
 
 <body>
   <a href="#container" class="skip-to-main-content">Skip to main content</a>
-  <nav id="menu">
+  <div id="menu" class="menu">
     <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
-    <a href="index.php" class="currentpage">Home</a>
-    <a href="partecipants.php">Participants</a>
-    <a href="statistics.php">Statistics</a>
+    <a href="index.php" class="currentpage link">Home</a>
+    <a href="partecipants.php" class="link">Participants</a>
+    <a href="statistics.php" class="link">Statistics</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
-  </nav>
+    <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+      <em class="fa fa-bars"></em>
+    </a>
+  </div>
   <section id="container">
     <header id="header">
       <h1 class="logo">VOTES4EUROVISION</h1>
@@ -35,7 +39,7 @@
     </article>
     <hr>
     <article class="aim" id="aim">
-        <h2>What is the aim of this website?</h2>
+      <h2>What is the aim of this website?</h2>
       <img src="img/vote.jpg" id="vote" alt="Lamp with 'vote' written on it">
       <p>
         This page aims at collecting the popular opinion about ESC songs given that duing the competition
@@ -45,9 +49,9 @@
     </article>
     <footer id="footer">
       <h3>Some external links</h3>
-        <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
-        <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a>
-        <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
+      <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
+      <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a>
+      <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
       <p>
         &copy; All rights reserved - 2022
       </p>

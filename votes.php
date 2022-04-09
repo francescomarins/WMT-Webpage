@@ -6,6 +6,9 @@
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="bg.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js"></script>
+
   <?php
 
   include("artist.php");
@@ -66,16 +69,16 @@
   };
   ?>
 
-  <nav id="menu">
-    <a class="logo" href="index.php">VOTESxEUROVISION</a>
-    <a href="index.php">Home</a>
-    <a href="partecipants.php">Participants</a>
-    <a href="votes.php">Voting</a>
-    <a href="statistics.php">Statistics</a>
-    <form action="logout.php" method="post">
-      <button type="submit" id="logout" name="logout" value="logout">Logout</button>
-    </form>
-  </nav>
+  <div id="menu" class="menu">
+    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
+    <a href="index.php" class="link">Home</a>
+    <a href="partecipants.php" class="link">Participants</a>
+    <a href="statistics.php" class="link">Statistics</a>
+    <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
+    <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+      <em class="fa fa-bars"></em>
+    </a>
+  </div>
   <header id="header">
     <h1>Eurovision Voting Page</h1>
     <h2>2022</h2>

@@ -11,6 +11,15 @@ function exists(input) {
   return atLeastOneChar;
 }
 
+function showMenu() {
+  var x = document.getElementById("menu");
+  if (x.className === "menu") {
+    x.className += " responsive";
+  } else {
+    x.className = "menu";
+  }
+}
+
 function check_login() {
   var ok = false;
   if(exists(document.getElementById("email").value) && exists(document.getElementById("password").value))
