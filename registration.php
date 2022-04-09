@@ -38,6 +38,7 @@
     <a href="index.php" class="currentpage link">Home</a>
     <a href="partecipants.php" class="link">Participants</a>
     <a href="statistics.php" class="link">Statistics</a>
+    <a href="votes.php" class="link">Voting page</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
       <em class="fa fa-bars"></em>
@@ -317,6 +318,14 @@
         <button type="button" onclick="document.location='login.php';">Sign in</button>
     </article>
   </section>
-
+  <footer id="footer">
+    <h3>Some external links</h3>
+    <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
+    <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a>
+    <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
+    <p>
+      &copy; All rights reserved - Francesco Marinelli - 2022
+    </p>
+  </footer>
 </body>
 </html>

@@ -9,7 +9,7 @@
   <script src="plotly-2.9.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="javascript.js"></script>
-    
+
   <?php
 
   include("artist.php");
@@ -107,9 +107,10 @@
   <a href="#header" class="skip-to-main-content">Skip to main content</a>
   <div id="menu" class="menu">
     <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
-    <a href="index.php" class="link">Home</a>
+    <a href="index.php" class="currentpage link">Home</a>
     <a href="partecipants.php" class="link">Participants</a>
-    <a href="statistics.php" class="currentpage link">Statistics</a>
+    <a href="statistics.php" class="link">Statistics</a>
+    <a href="votes.php" class="link">Voting page</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
       <em class="fa fa-bars"></em>

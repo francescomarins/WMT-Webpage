@@ -60,6 +60,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .menu .icon {
   display: none;
 }
@@ -105,30 +106,44 @@ button {
   min-height: 3em;
 }
 
+.aim {
+  min-height: 27.5vw;
+}
+
+.aim p.button-container {
+  text-align: center;
+}
+
+.intro {
+  min-height: 28vw;
+}
+
+.why {
+  min-height: 21vw;
+}
+
+.intro *, .aim *, .why * {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+img[id="vote"] {
+  width: 30vw;
+  height: 22.5vw;
+  float: right;
+  border-radius: 3vw;
+}
+
 img[id="maneskin"] {
   width: 40vw;
   height: 23vw;
   float: left;
   border-radius: 3vw;
 }
-.intro {
-  display: inline-block;
-  height: 30vw;
-}
 
-.intro *, .aim * {
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-.aim {
-  display: inline-block;
-  height: 30vw;
-}
-
-img[id="vote"] {
-  width: 20vw;
-  height: 30vw;
+img[id="learning"] {
+  width: 40vw;
+  height: 16vw;
   float: right;
   border-radius: 3vw;
 }
@@ -338,11 +353,20 @@ footer {
     text-align: center;
   }
 
+  .menu #votingpage {
+    display: block;
+    float: none;
+    display: block;
+    width: 100%;
+  }
+
   .menu.responsive a.link {
     float: none;
     display: block;
     width: 100%;
   }
+
+  form.centred *:not(button) { min-width: 80%; }
 
   .countries_container {
     width: 90%;
@@ -368,7 +392,21 @@ footer {
     border-radius: 3vw;
   }
 
-  form.centred * { min-width: 80%; }
+  img[id="vote"] {
+    width: 90vw;
+    height: auto;
+    float: none;
+    border-radius: 3vw;
+  }
+
+  img[id="learning"] {
+    width: 90vw;
+    height: auto;
+    float: none;
+    border-radius: 3vw;
+  }
+
+  form.centred *:not(button) { min-width: 90%; }
 
   /* participants  */
   section.artists-container iframe {

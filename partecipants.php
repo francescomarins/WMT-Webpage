@@ -6,8 +6,8 @@
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="javascript.js"></script>
-    
+  <script src="javascript.js"></script>
+
   <?php
 
   include("artist.php");
@@ -31,9 +31,10 @@
   <a href="#header" class="skip-to-main-content">Skip to main content</a>
   <div id="menu" class="menu">
     <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
-    <a href="index.php" class="link">Home</a>
-    <a href="partecipants.php" class="currentpage link">Participants</a>
+    <a href="index.php" class="currentpage link">Home</a>
+    <a href="partecipants.php" class="link">Participants</a>
     <a href="statistics.php" class="link">Statistics</a>
+    <a href="votes.php" class="link">Voting page</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
       <em class="fa fa-bars"></em>
@@ -52,15 +53,25 @@
     <article class="list-of-artists">
       <h3>See the list of all contestants. Click on their names to know something more about them.</h3>
       <?php
-        $column = 1;
+      $column = 1;
       foreach ($artists as $singer) {
-      echo '<a class="artist column' . $column . '" href=' . $singer->get_link() .'>' . $singer->get_name() . ' - ' . $singer->get_song() . '<span class="country">' . $singer->get_country() . '</span></a>';
-      if($column == 1)
+        echo '<a class="artist column' . $column . '" href=' . $singer->get_link() .'>' . $singer->get_name() . ' - ' . $singer->get_song() . '<span class="country">' . $singer->get_country() . '</span></a>';
+        if($column == 1)
         $column++;
-      else {
-        $column = 1;
-      }
+        else {
+          $column = 1;
+        }
       } ?>
     </article>
-</section>
+  </section>
+  <footer id="footer">
+    <h3>Some external links</h3>
+    <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
+    <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a>
+    <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCRpjHHu8ivVWs73uxHlWwFA" title="Eurovision Song Contest YouTube Channel"></a>
+    <p>
+      &copy; All rights reserved - Francesco Marinelli - 2022
+    </p>
+  </footer>
 </body>
+</html>
