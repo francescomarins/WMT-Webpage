@@ -61,6 +61,7 @@
     </article>
   </section>
   <footer id="footer">
+    <hr>
     <h3>Some external links</h3>
     <a class="fa fa-location-arrow" href="http://www.comune.torino.it/" title="Municipality of Turin"></a>
     <a class="fa fa-instagram" href="https://www.instagram.com/eurovision" title="Euovision Song Contest Instagram Account"></a>

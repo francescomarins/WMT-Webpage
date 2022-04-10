@@ -327,6 +327,7 @@ summary[data-order="1"], summary[data-order="2"], summary[data-order="3"] {
 }
 footer {
   text-align: center;
+  font-size: 0.8em;
 }
 
 .align-center {
