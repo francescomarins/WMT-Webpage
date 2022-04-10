@@ -66,7 +66,7 @@
 
     if(froms.length > 5) {
       from_countries[5] = "Others";
-      from_countries = from_countries.slice(0, 5);
+      from_countries = from_countries.slice(0, 6);
       var others_value = 0;
       for (var i = 5; i < froms.length; i++) {
         var item = froms[i];
@@ -122,14 +122,15 @@
     <h2>2022</h2>
   </header>
   <section id="countries_container" class="countries_container">
-    <h2>Votes' provenience</h2>
+    <h2>Users' provenience</h2>
     <p>
       This section containes a pie chart which graphically shows where votes come from.<br>
       In particular what is provided is the number of users that expressed at least one vote.
     </p>
       <div id="countriespie"></div>
       <p>
-        The chart only shows percentages so if you are interested click the button below and all details will be displayed.
+        The chart only shows percentages so if you are interested in numbers click the button below and all details will be displayed.
+        If there are no data available the chart will not be visible. Vote and come back!
       </p>
       <details>
       <summary>Number of users from each country</summary>

@@ -40,6 +40,7 @@
   $userresult = mysqli_query($con, $userquery);
   $userrow = mysqli_fetch_assoc($userresult);
   $uservotes = $userrow['available_votes'];
+  $usercountry = $userrow['country'];
 
   if($_POST['operation'] == "voting") {
     if ($_POST['country'] == "");
@@ -90,8 +91,8 @@
     <h2> Welcome to the voting page! You still have <?php echo "$uservotes"; ?> votes available! </h2>
     <p> In this page you can express the preference for a singer. It is possible to express one vote at a time.
       If you want to give all your twenty votes to a singer you must repeat the procedure all the times.
-      Remember that you cannot vote for an artist that represents your country.
-      After voting you can see the live ranking the statistics' page.
+      Remember that you cannot vote for an artist that represents your country, <?php echo "$usercountry"; ?> in your case.<br>
+      After voting you can see the live ranking in the statistics' page.
     </p>
 
     <form class="voting-form centred" action="votes.php" method="post">

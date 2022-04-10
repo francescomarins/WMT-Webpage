@@ -49,7 +49,15 @@
       <h1>Registration</h1>
     </header>
     <article id="reg">
-        <h3>Register to access the protected area and to vote for your favourite singer</h3>
+        <?php
+        if($result)
+        echo "<h3>Successful registration. Please log in to enter the website!</h3>";
+        elseif ($empty) {
+          echo "<h3>Something went wrong. Fill both fields!</h3>";
+        } else {
+          echo "<h3>Register to access the protected area and to vote for your favourite singer</h3>";
+        }
+        ?>
       <form name="reg-form" class="reg-form centred" action="registration.php" method="post" onsubmit="return check_reg();">
         <?php
         if($userpresent)
@@ -303,13 +311,6 @@
           <option value="Zimbabwe">Zimbabwe</option>
         </select><br>
         <button type="submit" name="operation" value="registration">Sign up</button>
-        <?php
-        if($result)
-        echo "<p>Successful registration. Please log in to enter the website!</p>";
-        elseif ($empty) {
-          echo "<p>Something went wrong. Fill both fields!</p>";
-        }
-        ?>
       </form>
     </article>
     <hr class="half-row">
