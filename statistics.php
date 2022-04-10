@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>VOTES4EUROVISION</title>
+  <title>VOTES4EUROVISION | Statistics</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
   <script src="plotly-2.9.0.min.js"></script>
