@@ -48,7 +48,7 @@
     <article class="iframe-container">
       <h3>All 40 participating songs</h3>
       <p>Listen to all the songs partaking in the competition, the video below contains all of them!</p>
-      <iframe id="allsongs" src="https://www.youtube.com/embed/nrOaYo3I-9A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      <iframe id="allsongs" src="https://www.youtube.com/embed/nrOaYo3I-9A?start=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
     </article>
     <article class="list-of-artists">
       <h3>See the list of all contestants. Click on their names to know something more about them.</h3>

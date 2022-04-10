@@ -75,7 +75,9 @@
     <a href="partecipants.php" class="link">Participants</a>
     <a href="statistics.php" class="link">Statistics</a>
     <a href="votes.php" class="link">Voting page</a>
-    <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
+    <form action="logout.php" method="post">
+      <button type="submit" id="logout" name="logout" value="logout">Logout</button>
+    </form>
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
       <em class="fa fa-bars"></em>
     </a>
@@ -103,7 +105,7 @@
         <option value="" disabled selected>Select a country</option>
         <?php
         foreach ($artists as $singer) {
-          echo '<option value="' . $singer->get_country() . '">(' . $singer->get_country() . ') ' . $singer->get_name() . ' - ' . $singer->get_song() . '</option>';
+          echo '<option value="' . $singer->get_country() . '">' . $singer->get_country() . ' (' . $singer->get_name() . ' - ' . $singer->get_song() . ')</option>';
         }
         ?>
       </select> <br>

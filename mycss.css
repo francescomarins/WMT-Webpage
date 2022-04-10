@@ -1,19 +1,4 @@
 @font-face {
-  font-family: 'rieslingregular';
-  src: url('fonts/riesling-webfont.woff2') format('woff2'),
-  url('fonts/riesling-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Dosis';
-  src: url('fonts/Dosis-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Anton';
   src: url('fonts/Anton-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -64,19 +49,26 @@ body {
 .menu .icon {
   display: none;
 }
+
 .menu a:hover {
   color: white;
 }
+
 a {
   color: white;
 }
+
 .menu a.currentpage {
   color: white;
   font-weight: bolder;
 }
+
 a:hover {
   filter: drop-shadow(0px 0px 1px lightgrey);
+  transition: 0.5s;
+  transform: scale(1.2) perspective(1px);
 }
+
 a.fa {
   padding: 20px;
   font-size: 30px;
@@ -86,15 +78,19 @@ a.fa {
   margin: 5px 2px;
   border-radius: 50%;
 }
+
 .fa-instagram {
   background: #125688;
 }
+
 .fa-location-arrow {
   background: #4d25ba;
 }
+
 .fa-youtube {
   background: #bb0000;
 }
+
 button {
   color: white;
   background-color: rgb(255, 20, 147, 0.8);
@@ -104,10 +100,6 @@ button {
   font-weight: 700;
   min-width: 10%;
   min-height: 3em;
-}
-
-.aim {
-  min-height: 27.5vw;
 }
 
 .aim p.button-container {
@@ -125,13 +117,6 @@ button {
 .intro *, .aim *, .why * {
   padding-left: 2%;
   padding-right: 2%;
-}
-
-img[id="vote"] {
-  width: 30vw;
-  height: 22.5vw;
-  float: right;
-  border-radius: 3vw;
 }
 
 img[id="maneskin"] {
@@ -153,14 +138,19 @@ select {
   border-radius: 3px;
   border-width: 0;
 }
+
 button:hover {
   filter: drop-shadow(0px 0px 4px white);
+  transition: 0.5s;
+  transform: scale(1.2) perspective(1px);
 }
+
 form.centred {
   width: 80%;
   text-align: center;
   margin: auto;
 }
+
 form.centred * {
   min-width: 40%;
   margin-top: 1%;
@@ -184,6 +174,7 @@ article.button-container {
   margin-top: 1%;
   text-align: center;
 }
+
 article.button-container * {
   margin-top: 1%;
 }
@@ -195,34 +186,41 @@ header {
   text-align: center;
   font-family: "Raleway Thin";
 }
+
 .logo {
   text-transform: uppercase;
   text-shadow: 2px 2px 6px purple;
   font-family: "Anton";
   font-style: italic;
 }
+
 header h1.logo {
   font-size: 300%;
 }
+
 header h2 {
   color: deeppink;
   text-shadow: 2px 2px 5px black;
   font-size: 150%;
 }
+
 article {
   margin-left: 2.5%;
   margin-right: 2.5%;
   text-align: justify;
 }
+
 input {
   margin: 10px;
   border-radius: 5px;
   border: 1px solid steelblue;
 }
+
 h3 {
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
+
 .artist {
   font-weight: bold;
   background-image: linear-gradient(to right, rgb(179, 0, 179), lightseagreen);
@@ -310,6 +308,12 @@ summary {
   border-radius: 10px;
 }
 
+summary:hover {
+  transition: 0.5s;
+  transform: scale(1.1) perspective(1px);
+  cursor: pointer;
+}
+
 summary[data-order] {
   background-image: linear-gradient(135deg, #508bed 0%, #b073ce 100%);
 }
@@ -322,9 +326,11 @@ summary[data-order="1"], summary[data-order="2"], summary[data-order="3"] {
 .city {
   list-style: url("img/city.png");
 }
+
 .ig {
   list-style: url("img/instagram.png");
 }
+
 footer {
   text-align: center;
   font-size: 0.8em;
@@ -374,6 +380,7 @@ footer {
     margin: auto;
     float: none;
   }
+
   .artists_container {
     width: 90%;
     margin: auto;
@@ -387,13 +394,6 @@ footer {
   }
 
   img[id="maneskin"] {
-    width: 90vw;
-    height: auto;
-    float: none;
-    border-radius: 3vw;
-  }
-
-  img[id="vote"] {
     width: 90vw;
     height: auto;
     float: none;

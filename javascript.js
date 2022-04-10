@@ -60,6 +60,7 @@ function display_totals() {
 
   if(froms.length > 5) {
     from_countries[5] = "Others";
+    from_countries = from_countries.slice(0, 5);
     var others_value = 0;
     for (var i = 5; i < froms.length; i++) {
       var item = froms[i];

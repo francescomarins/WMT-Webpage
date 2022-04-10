@@ -29,7 +29,6 @@
     </header>
     <article class="aim" id="aim">
       <h2>What is the aim of this website?</h2>
-      <img src="img/vote.jpg" id="vote" alt="Lamp with 'vote' written on it">
       <p>
         This page aims at collecting the popular opinion about ESC songs given that during the competition
         it is possible to vote only upon a payment. This, instead, is a way to discover how results would be
