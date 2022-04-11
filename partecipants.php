@@ -30,9 +30,9 @@
 <body>
   <a href="#header" class="skip-to-main-content">Skip to main content</a>
   <div id="menu" class="menu">
-    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
-    <a href="index.php" class="currentpage link">Home</a>
-    <a href="partecipants.php" class="link">Participants</a>
+    <a class="logo" title="Home" href="index.php">VOTES4EUROVISION</a>
+    <a href="index.php" class="link">Home</a>
+    <a href="partecipants.php" class="link currentpage">Participants</a>
     <a href="statistics.php" class="link">Statistics</a>
     <a href="votes.php" class="link">Voting page</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
@@ -45,9 +45,9 @@
     <h2>2022</h2>
   </header>
   <section id="artists-container" class="artists-container">
+    <h3>All 40 participating songs and the list of the artists</h3>
     <article class="iframe-container">
-      <h3>All 40 participating songs</h3>
-      <p>Listen to all the songs partaking in the competition, the video below contains all of them!</p>
+      <h4>Listen to all the songs partaking in the competition, the video below contains all of them!</h4>
       <iframe id="allsongs" src="https://www.youtube.com/embed/nrOaYo3I-9A?start=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
     </article>
     <article class="list-of-artists">

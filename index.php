@@ -12,7 +12,7 @@
 <body>
   <a href="#container" class="skip-to-main-content">Skip to main content</a>
   <div id="menu" class="menu">
-    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
+    <a class="logo currentpage" title="Home" href="index.php">VOTES4EUROVISION</a>
     <a href="index.php" class="currentpage link">Home</a>
     <a href="partecipants.php" class="link">Participants</a>
     <a href="statistics.php" class="link">Statistics</a>

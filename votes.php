@@ -71,11 +71,11 @@
   ?>
 
   <div id="menu" class="menu">
-    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
-    <a href="index.php" class="currentpage link">Home</a>
+    <a class="logo" title="Home" href="index.php">VOTES4EUROVISION</a>
+    <a href="index.php" class="link">Home</a>
     <a href="partecipants.php" class="link">Participants</a>
     <a href="statistics.php" class="link">Statistics</a>
-    <a href="votes.php" class="link">Voting page</a>
+    <a href="votes.php" class="link currentpage">Voting page</a>
     <form action="logout.php" method="post">
       <button type="submit" id="logout" name="logout" value="logout">Logout</button>
     </form>

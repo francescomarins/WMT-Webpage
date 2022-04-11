@@ -49,10 +49,10 @@
 <body>
   <a href="#header" class="skip-to-main-content">Skip to main content</a>
   <div id="menu" class="menu">
-    <a class="logo" title="Home" href="index.php" class="currentpage">VOTES4EUROVISION</a>
-    <a href="index.php" class="currentpage link">Home</a>
+    <a class="logo" title="Home" href="index.php">VOTES4EUROVISION</a>
+    <a href="index.php" class="link">Home</a>
     <a href="partecipants.php" class="link">Participants</a>
-    <a href="statistics.php" class="link">Statistics</a>
+    <a href="statistics.php" class="link currentpage">Statistics</a>
     <a href="votes.php" class="link">Voting page</a>
     <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote!</button>
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
