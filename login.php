@@ -48,7 +48,7 @@
           echo "<p>Wrong email or password!</p>"
         ?>
         <label for="email">E-mail</label> <br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" autofocus><br>
         <label for="password">Password</label> <br>
         <input type="password" id="password" name="password"><br>
         <button type="submit" name="operation" value="login">Login</button>

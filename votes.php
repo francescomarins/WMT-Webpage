@@ -102,7 +102,7 @@
       else if ($wrongvote)
       echo "<p> YOU CANNOT VOTE FOR AN ARTIST OF YOUR OWN COUNTRY </p>";
       ?>
-      <select name="country" id="country">
+      <select name="country" id="country" autofocus>
         <option value="" disabled selected>Select a country</option>
         <?php
         foreach ($artists as $singer) {

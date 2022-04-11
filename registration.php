@@ -64,7 +64,7 @@
         echo "<p>Email already registered. Click on the button below on the left to log in!</p>"
         ?>
         <label for="email">E-mail</label> <br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" autofocus><br>
         <label for="password" >Password</label> <br>
         <input type="password" id="password" name="password"><br>
         <label for="country">Country</label> <br>
