@@ -14,6 +14,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html {
+  min-height: 100vh;
+}
+
 body {
   background-image: linear-gradient(to bottom right, black, steelblue, slateblue, rebeccaPurple);
   font-family: "Raleway Thin";

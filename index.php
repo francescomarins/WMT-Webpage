@@ -35,7 +35,7 @@
         different if voting was free.
       </p>
       <p>
-        What are you waiting for? Click on the button below or on VOTING PAGE in the menu and vote for yuor favourite!
+        What are you waiting for? Click on the button below or on VOTING PAGE in the menu and vote for your favourite!
       </p>
       <p class="button-container">
         <button type="button" class="vote" name="vote" onclick="document.location = 'votes.php';">Vote now!</button>
@@ -56,7 +56,7 @@
     <hr>
     <article class="why" id="why">
       <h2>Why does this website exist?</h2>
-      <img id="learning" src="img/learning.jpg" alt="A book and mathematical formulas">
+      <img id="learning" src="img/learning.jpeg" alt="A book and mathematical formulas">
       <p>
         The entire website is a university project to be handed in for an exam.
         The topic of the website has been decided by the student.

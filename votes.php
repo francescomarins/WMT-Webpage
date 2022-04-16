@@ -5,7 +5,6 @@
   <title>VOTES4EUROVISION | Voting Page</title>
   <link rel="icon" href="img/logo2.png" type="image/png" sizes="any">
   <link rel="stylesheet" href="mycss.css" type="text/css">
-  <link rel="stylesheet" href="bg.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="javascript.js"></script>
 
